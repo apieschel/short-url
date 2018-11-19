@@ -1,6 +1,7 @@
 dependencies:
   body-parser: 1.18.3
   cors: 2.8.5
+  dotenv: 6.1.0
   express: 5.0.0-alpha.7
   mongodb: 2.2.36
   mongoose: 4.13.17
@@ -118,6 +119,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+  /dotenv/6.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-/veDn2ztgRlB7gKmE3i9f6CmDIyXAy6d5nBq+whO9SLX+Zs1sXEgFLPi+aSuWqUuusMfbi84fT8j34fs1HaYUw==
   /ee-first/1.1.1:
     dev: false
     resolution:
@@ -598,7 +605,8 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   body-parser: ^1.15.2
-  cors: ^2.8.1
-  express: ^5.0.0-alpha.2
-  mongodb: ^2.2.5
-  mongoose: ^4.5.7
+  cors: ^2.8.5
+  dotenv: ^6.1.0
+  express: ^5.0.0-alpha.7
+  mongodb: ^2.2.36
+  mongoose: ^4.13.17
