@@ -69,7 +69,7 @@ app.post("/api/shorturl/new", function (req, res) {
 					ShortUrl.findOne({url: newlink}, function(err, data) {
 						if(data !== null) {
 							if(err) throw err;
-							res.json(data);						
+							res.json("That url has already been added to the database. Your short url is: " + data.shortURL);						
 						} else {			
 							if(err) throw err;
 							let counter;
