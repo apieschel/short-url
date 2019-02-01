@@ -26,15 +26,18 @@ h3 {
   max-width: 700px;
   margin: 15px auto;
 }
+
 code {
   font-family: monospace;
   padding: 2px;
   color: black;
   background-color: #fff;
 }
+
 ol {
 	list-style-position: inside;
 }
+
 ul {
 	list-style-type: none;
 }
@@ -42,6 +45,7 @@ ul {
 li {
   margin-bottom: 0.5em;
 }
+
 .user-stories li {
   margin-bottom: 1em;
 }
