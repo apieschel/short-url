@@ -36,17 +36,14 @@ app.post("/api/shorturl/new", function (req, res) {
 
 	let body = '';
 	let urlObj;
-	
-    
+	    
 	req.on('data', chunk => {
-				console.log(chunk);
         body += chunk.toString(); // convert Buffer to string
 	});
 	
 	req.on('end', () => {
 			let url2 = body.replace('%3A%2F%2F', '://');
 			urlObj = parse(url2);
-			console.log(urlObj.url);
 			let newlink = urlObj.url;
 			
 			if (regex.test(newlink)) {
