@@ -57,13 +57,12 @@ app.post("/api/shorturl/new", function (req, res) {
 					ShortUrl.findOne({url: newlink}, function(err, data) {
 						if(data !== null) {
 							if(err) throw err;
-							res.json("That url has already been added to the database. Your short url is: " + data.shortURL);						
+							res.json("That url has already been added to the database. Your short url is: https://striped-block.glitch.me/api/shorturl/" + data.shortURL);						
 						} else {			
 							if(err) throw err;
 							let counter;
 							ShortUrl.count({}, function(err, count){  
 								if(err) throw err;
-								console.log(typeof(count));
 								
 								let newCount = parseInt(count) + 1;
 								let urlNew = new ShortUrl({url: newlink, shortURL: newCount});
@@ -90,7 +89,7 @@ async function redirect(req, res) {
   	} else {
 			res.send("Sorry, that URL isn't in our database.");
 		}
-	}); // uses short to find entry
+	});
 }
 
 app.get("/api/shorturl/:short", redirect);
